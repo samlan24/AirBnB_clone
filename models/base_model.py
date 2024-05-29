@@ -8,8 +8,15 @@ from datetime import datetime
 class BaseModel:
     """class initialization"""
 
-    def __int__(self):
-        """initializing public instance attributes"""
+    def __init__(self, *args, **kwargs):
+        """initializing public instance attributes
+        args:
+            *args: argument lists
+            **kwargs: key-value dictionary
+
+        """
+
+
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
